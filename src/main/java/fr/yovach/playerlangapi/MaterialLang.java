@@ -971,14 +971,14 @@ public enum MaterialLang implements ICraftLang {
     ZOMBIE_VILLAGER_SPAWN_EGG("item.minecraft.zombie_villager_spawn_egg"),
     ZOMBIE_WALL_HEAD("block.minecraft.zombie_wall_head");
 
-    private final String translationId;
+    private final String translation;
 
-    MaterialLang(String translationId) {
-        this.translationId = translationId;
+    MaterialLang(String translation) {
+        this.translation = translation;
     }
 
     @Override
-    public String getTranslationId() {
-        return translationId;
+    public String getTranslation() {
+        return translation;
     }
 }
