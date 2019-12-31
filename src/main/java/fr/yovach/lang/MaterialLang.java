@@ -1,4 +1,4 @@
-package fr.yovach.playerlangapi;
+package fr.yovach.lang;
 
 public enum MaterialLang implements ICraftLang {
     ACACIA_BOAT("item.minecraft.acacia_boat"),

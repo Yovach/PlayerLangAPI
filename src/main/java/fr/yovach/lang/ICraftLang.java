@@ -1,4 +1,4 @@
-package fr.yovach.playerlangapi;
+package fr.yovach.lang;
 
 public interface ICraftLang {
 

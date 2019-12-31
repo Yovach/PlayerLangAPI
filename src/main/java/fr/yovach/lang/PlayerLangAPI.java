@@ -1,9 +1,10 @@
-package fr.yovach.playerlangapi;
+package fr.yovach.lang;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import org.apache.commons.lang.Validate;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.*;
@@ -18,7 +19,7 @@ public final class PlayerLangAPI extends JavaPlugin {
     public void onEnable() {
         getLogger().info(MaterialLang.values().length + " translations of materials are loaded.");
 
-        try {
+       try {
             readJSON("assets/minecraft/lang/en_us.json");
         } catch (IOException e) {
             e.printStackTrace();
@@ -34,6 +35,7 @@ public final class PlayerLangAPI extends JavaPlugin {
             file.createNewFile();
         }
 
+        Validate.notNull(stream, "stream cannot be null");
         final BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
         final Gson gson = new GsonBuilder().setPrettyPrinting().create();
         final JsonObject json = gson.fromJson(reader, JsonObject.class);
