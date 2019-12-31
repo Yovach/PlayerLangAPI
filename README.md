@@ -1,5 +1,5 @@
 # PlayerLangAPI
-A plugin enables developpers to use translations on client side dynamically.
+A plugin which enables developpers to use translations on client side dynamically (with lang.json)
 
 This plugin is only compatible with 1.13+ versions (until Mojang changes languages format)
 
