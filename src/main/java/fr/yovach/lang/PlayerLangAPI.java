@@ -3,9 +3,13 @@ package fr.yovach.lang;
 import com.google.gson.JsonObject;
 import de.tr7zw.nbtapi.NBTCompound;
 import de.tr7zw.nbtapi.NBTItem;
+import fr.yovach.lang.data.EnchantmentLang;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.IllegalPluginAccessException;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.Arrays;
 
 public final class PlayerLangAPI extends JavaPlugin {
 

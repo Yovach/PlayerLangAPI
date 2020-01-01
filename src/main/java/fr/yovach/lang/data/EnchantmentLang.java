@@ -57,6 +57,6 @@ public enum EnchantmentLang implements ICraftLang<Enchantment> {
     }
 
     @Override public Enchantment get() {
-        return Enchantment.getByKey(NamespacedKey.minecraft(this.name()));
+        return Enchantment.getByKey(NamespacedKey.minecraft(this.translation));
     }
 }

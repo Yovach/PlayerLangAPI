@@ -58,6 +58,32 @@ translatableDiamond.setColor(net.md_5.bungee.api.ChatColor.GOLD);
 player.sendMessage(text);
 ```
 
+
+
+Add a translatable display name on a ItemStack (**requires NBTAPI**) :
+```
+// We check if the PlayerLangAPI is enabled on the server
+if(Bukkit.getPluginManager().isPluginEnabled("PlayerLangAPI")) {
+    // Get the instance of plugin
+    final PlayerLangAPI langAPI = (PlayerLangAPI) Bukkit.getPluginManager().getPlugin("PlayerLangAPI");
+    Validate.notNull(langAPI, "PlayerLangAPI is disabled!");
+    // We check if NBTAPI plugin is enabled on the server.
+    if(langAPI.hasNBTAPI()) {
+        /* Creation of a new ItemStack */
+        final ItemStack itemStack = new ItemStack(MaterialLang.DIAMOND.get());
+
+        /* We put properties of display */
+        final JsonObject gson = new JsonObject();
+        gson.addProperty("translate", MaterialLang.STONE_SWORD.getTranslation());
+        gson.addProperty("color", "red");
+        gson.addProperty("italic", "false");
+
+        /* We finally add itemstack into inventory of player */
+        player.getInventory().addItem(langAPI.setDisplay(itemStack, gson));
+    }
+}
+```
+
 **NOTE :** When I started to create the plugin, I hadn't noticed that there was a plugin similar to this one but that only supports 1.7-1.12 versions. (https://www.spigotmc.org/resources/1-7-x-1-12-language-utils.8859/)
 
 
