@@ -34,4 +34,13 @@ public enum ColorLang implements ICraftLang<Color> {
         final String type = "color";
         return String.join(".", Arrays.asList(type, "minecraft", translation));
     }
+
+    /**
+     * Don't use this method, it is useless
+     *
+     * @return null
+     */
+    @Override public Color get() {
+        return null;
+    }
 }

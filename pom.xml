@@ -4,12 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <name>PlayerLangAPI</name>
     <groupId>fr.yovach</groupId>
     <artifactId>PlayerLangAPI</artifactId>
-    <version>0.2</version>
+    <version>0.3</version>
+
+    <description>A library which enables developpers to use translations on client side dynamically</description>
+    <url>https://github.com/Yovach/PlayerLangAPI</url>
+
     <packaging>jar</packaging>
 
-    <name>PlayerLangAPI</name>
 
     <properties>
         <java.version>1.8</java.version>
@@ -55,19 +59,26 @@
 
     <repositories>
         <repository>
-            <id>papermc-repo</id>
-            <url>https://papermc.io/repo/repository/maven-public/</url>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
         <repository>
-            <id>sonatype</id>
-            <url>https://oss.sonatype.org/content/groups/public/</url>
+            <id>codemc-repo</id>
+            <url>https://repo.codemc.org/repository/maven-public/</url>
+            <layout>default</layout>
         </repository>
     </repositories>
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.15-R0.1-SNAPSHOT</version>
+            <version>1.15.1-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>de.tr7zw</groupId>
+            <artifactId>item-nbt-api-plugin</artifactId>
+            <version>2.2.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

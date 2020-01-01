@@ -122,4 +122,8 @@ public enum EntityTypeLang implements ICraftLang<EntityType> {
         final String type = "entity";
         return String.join(".", Arrays.asList(type, "minecraft", translation));
     }
+
+    @Override public EntityType get() {
+        return EntityType.valueOf(this.name());
+    }
 }

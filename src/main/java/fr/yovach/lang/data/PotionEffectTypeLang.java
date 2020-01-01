@@ -50,4 +50,8 @@ public enum PotionEffectTypeLang implements ICraftLang<PotionEffectType> {
         final String type = "effect";
         return String.join(".", Arrays.asList(type, "minecraft", translation));
     }
+
+    @Override public PotionEffectType get() {
+        return PotionEffectType.getByName(this.name());
+    }
 }

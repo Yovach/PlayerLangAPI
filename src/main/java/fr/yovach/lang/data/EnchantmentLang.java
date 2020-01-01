@@ -1,6 +1,7 @@
 package fr.yovach.lang.data;
 
 import fr.yovach.lang.ICraftLang;
+import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 
 import java.util.Arrays;
@@ -53,5 +54,9 @@ public enum EnchantmentLang implements ICraftLang<Enchantment> {
     @Override public String getTranslation() {
         final String type = "enchantment";
         return String.join(".", Arrays.asList(type, "minecraft", translation));
+    }
+
+    @Override public Enchantment get() {
+        return Enchantment.getByKey(NamespacedKey.minecraft(this.name()));
     }
 }

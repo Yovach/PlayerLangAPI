@@ -988,4 +988,8 @@ public enum MaterialLang implements ICraftLang<Material> {
     @Override public String getTranslation() {
         return String.join(".", Arrays.asList(type, "minecraft", translation));
     }
+
+    @Override public Material get() {
+        return Material.valueOf(this.name());
+    }
 }

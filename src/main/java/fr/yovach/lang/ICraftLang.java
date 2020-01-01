@@ -4,4 +4,6 @@ public interface ICraftLang<T> {
 
     public String getTranslation();
 
+    T get();
+
 }
