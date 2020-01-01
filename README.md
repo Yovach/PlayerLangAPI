@@ -50,11 +50,16 @@ Translatable component into a sentence :
 ```
 /* Our text component (a sentence for example) */
 final TextComponent text = new TextComponent("Please use your ");
+
 /* Our component which will be translated by client */
 final TranslatableComponent translatableDiamond = new TranslatableComponent(MaterialLang.DIAMOND.getTranslation());
+
 text.addExtra(translatableDiamond);
+
 /* We can put a color on the translated component :) */
 translatableDiamond.setColor(net.md_5.bungee.api.ChatColor.GOLD);
+
+
 player.sendMessage(text);
 ```
 
