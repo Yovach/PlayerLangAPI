@@ -37,6 +37,10 @@ This plugin in the form of a library gives you the possibility to use the langua
 ```
 
 
+##### Plugins folder
+Place the plugin (.jar) in "./plugins/" folder
+
+
 ### Usage
 
 If you want to send the name of the stone sword according to the player's language (null example but it is an example) :
