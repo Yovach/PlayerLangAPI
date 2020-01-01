@@ -73,7 +73,7 @@ final Enchantment enchantment = EnchantmentLang.DAMAGE_ALL.get();
 final Material material = MaterialLang.DIAMOND.get();
 ```
 
-Add a translatable display name on a ItemStack (**requires NBTAPI**) :
+Add a translatable display name on a ItemStack (**requires [NBTAPI](https://www.spigotmc.org/resources/nbt-api.7939/)**) :
 ```
 // We check if the PlayerLangAPI is enabled on the server
 if(Bukkit.getPluginManager().isPluginEnabled("PlayerLangAPI")) {
