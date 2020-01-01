@@ -46,6 +46,18 @@ player.sendMessage(component);
 ```
 This will send "Stone sword" for a player whose language of play is English and "Espada de piedre" for a Spanish player.
 
+Translatable component into a sentence :
+```
+/* Our text component (a sentence for example) */
+final TextComponent text = new TextComponent("Please use your ");
+/* Our component which will be translated by client */
+final TranslatableComponent translatableDiamond = new TranslatableComponent(MaterialLang.DIAMOND.getTranslation());
+text.addExtra(translatableDiamond);
+/* We can put a color on the translated component :) */
+translatableDiamond.setColor(net.md_5.bungee.api.ChatColor.GOLD);
+player.sendMessage(text);
+```
+
 **NOTE :** When I started to create the plugin, I hadn't noticed that there was a plugin similar to this one but that only supports 1.7-1.12 versions. (https://www.spigotmc.org/resources/1-7-x-1-12-language-utils.8859/)
 
 
