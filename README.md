@@ -58,7 +58,11 @@ translatableDiamond.setColor(net.md_5.bungee.api.ChatColor.GOLD);
 player.sendMessage(text);
 ```
 
-
+Retrieve a class from the API (EnchantmentLang -> Enchantment, MaterialLang -> Material) :
+```
+final Enchantment enchantment = EnchantmentLang.DAMAGE_ALL.get();
+final Material material = MaterialLang.DIAMOND.get();
+```
 
 Add a translatable display name on a ItemStack (**requires NBTAPI**) :
 ```
@@ -86,5 +90,7 @@ if(Bukkit.getPluginManager().isPluginEnabled("PlayerLangAPI")) {
 
 **NOTE :** When I started to create the plugin, I hadn't noticed that there was a plugin similar to this one but that only supports 1.7-1.12 versions. (https://www.spigotmc.org/resources/1-7-x-1-12-language-utils.8859/)
 
-
+Screenshots are provided on the SpigotMC page of the plugin!
 If you have any suggestions, don't hesitate to tell me!
+
+SpigotMC page: https://www.spigotmc.org/resources/playerlangapi.73932/

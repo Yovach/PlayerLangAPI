@@ -3,13 +3,9 @@ package fr.yovach.lang;
 import com.google.gson.JsonObject;
 import de.tr7zw.nbtapi.NBTCompound;
 import de.tr7zw.nbtapi.NBTItem;
-import fr.yovach.lang.data.EnchantmentLang;
-import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.IllegalPluginAccessException;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.Arrays;
 
 public final class PlayerLangAPI extends JavaPlugin {
 
@@ -18,13 +14,6 @@ public final class PlayerLangAPI extends JavaPlugin {
         if (!hasNBTAPI()) {
             getLogger().warning("To use the functions concerning the modification of the display of items, you must install the plugin \"NBTAPI\" (from tr7zw).");
         }
-        /*
-        getLogger().info(MaterialLang.values().length + " translations of materials are loaded.");
-        getLogger().info(EnchantmentLang.values().length + " translations of enchantments are loaded.");
-        getLogger().info(ColorLang.values().length + " translations of colors are loaded.");
-        getLogger().info(EntityTypeLang.values().length + " translations of enchantments are loaded.");
-        getLogger().info(PotionEffectTypeLang.values().length + " translations of enchantments are loaded.");
-         */
     }
 
     /**
