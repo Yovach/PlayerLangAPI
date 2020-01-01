@@ -13,8 +13,28 @@ Usually several plugins use stored object names without taking into account the 
 This plugin in the form of a library gives you the possibility to use the languages used by the client. However, you will have to master the "TranslatableComponent" (see https://www.spigotmc.org/wiki/the-chat-component-api/#basics)
 
 ### How use it  ?
-Currently, it's rather difficult to use since I don't have a Maven directory, but I'll find out more about that in a few days.
-You can however use the library by compiling it and using the local repository.
+
+##### Maven repository
+
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+
+##### Maven dependency
+
+
+```xml
+<dependency>
+    <groupId>com.github.Yovach</groupId>
+    <artifactId>PlayerLangAPI</artifactId>
+    <version>0.2</version>
+</dependency>
+```
 
 
 ### Usage
