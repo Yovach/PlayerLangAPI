@@ -1,6 +1,6 @@
 package fr.yovach.lang;
 
-public interface ICraftLang {
+public interface ICraftLang<T> {
 
     public String getTranslation();
 

@@ -1,5 +1,5 @@
 name: PlayerLangAPI
 version: ${project.version}
-main: fr.yovach.playerlangapi.PlayerLangAPI
+main: fr.yovach.lang.PlayerLangAPI
 api-version: 1.13
 authors: [Yovach]
