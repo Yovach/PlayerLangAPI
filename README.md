@@ -2,7 +2,7 @@
 
 PlayerLangAPI is a library enables developpers to use translations on client side dynamically.
 
-This plugin is only compatible with 1.13+ versions (until Mojang changes languages format)
+This plugin is compatible with 1.13+ versions (until Mojang changes languages format)
 
 
 ### Why use this library?
