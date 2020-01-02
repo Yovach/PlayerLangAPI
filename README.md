@@ -30,7 +30,7 @@ This plugin in the form of a library gives you the possibility to use the langua
 <dependency>
     <groupId>com.github.Yovach</groupId>
     <artifactId>PlayerLangAPI</artifactId>
-    <version>0.3</version>
+    <version>0.4</version>
 </dependency>
 ```
 
