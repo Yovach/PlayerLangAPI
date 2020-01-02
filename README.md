@@ -4,8 +4,6 @@ PlayerLangAPI is a library enables developpers to use translations on client sid
 
 This plugin is only compatible with 1.13+ versions (until Mojang changes languages format)
 
-I haven't tested in 1.13.x and 1.14.x but I think it should work because the format of lang hasn't been updated since 1.13
-
 
 ### Why use this library?
 Usually several plugins use stored object names without taking into account the client's translation or the object name is fixed and if the client changes language, he will always see the old name.
