@@ -1,6 +1,9 @@
 package fr.yovach.lang.data;
 
 import fr.yovach.lang.ICraftLang;
+import fr.yovach.lang.PlayerLangAPI;
+import org.apache.commons.lang.Validate;
+import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 
@@ -45,6 +48,7 @@ public enum EnchantmentLang implements ICraftLang<Enchantment> {
     ARROW_DAMAGE("power"),
     ARROW_INFINITE("infinity");
 
+    private final String type = "enchantment";
     private final String translation;
 
     EnchantmentLang(final String translation) {
@@ -52,11 +56,16 @@ public enum EnchantmentLang implements ICraftLang<Enchantment> {
     }
 
     @Override public String getTranslation() {
-        final String type = "enchantment";
+        return getTranslation(Bukkit.getBukkitVersion());
+    }
+
+    @Override public String getTranslation(String version) {
         return String.join(".", Arrays.asList(type, "minecraft", translation));
     }
 
     @Override public Enchantment get() {
-        return Enchantment.getByKey(NamespacedKey.minecraft(this.translation));
+        final Enchantment value = Enchantment.getByKey(NamespacedKey.minecraft(this.translation));
+        Validate.notNull(value, PlayerLangAPI.NOT_SUPPORTED);
+        return value;
     }
 }

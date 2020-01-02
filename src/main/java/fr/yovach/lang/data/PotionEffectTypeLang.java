@@ -1,57 +1,60 @@
 package fr.yovach.lang.data;
 
 import fr.yovach.lang.ICraftLang;
+import fr.yovach.lang.PlayerLangAPI;
+import org.apache.commons.lang.Validate;
+import org.bukkit.Bukkit;
 import org.bukkit.potion.PotionEffectType;
 
 import java.util.Arrays;
 
 public enum PotionEffectTypeLang implements ICraftLang<PotionEffectType> {
-    ABSORPTION("absorption"),
-    BAD_OMEN("bad_omen"),
-    BLINDNESS("blindness"),
-    CONDUIT_POWER("conduit_power"),
-    DOLPHINS_GRACE("dolphins_grace"),
-    FIRE_RESISTANCE("fire_resistance"),
-    GLOWING("glowing"),
-    HASTE("haste"),
-    HEALTH_BOOST("health_boost"),
-    HERO_OF_THE_VILLAGE("hero_of_the_village"),
-    HUNGER("hunger"),
-    INSTANT_DAMAGE("instant_damage"),
-    INSTANT_HEALTH("instant_health"),
-    INVISIBILITY("invisibility"),
-    JUMP_BOOST("jump_boost"),
-    LEVITATION("levitation"),
-    LUCK("luck"),
-    MINING_FATIGUE("mining_fatigue"),
-    NAUSEA("nausea"),
-    NIGHT_VISION("night_vision"),
-    POISON("poison"),
-    REGENERATION("regeneration"),
-    RESISTANCE("resistance"),
-    SATURATION("saturation"),
-    SLOWNESS("slowness"),
-    SLOW_FALLING("slow_falling"),
-    SPEED("speed"),
-    STRENGTH("strength"),
-    UNLUCK("unluck"),
-    WATER_BREATHING("water_breathing"),
-    WEAKNESS("weakness"),
-    WITHER("wither"),
+    ABSORPTION(),
+    BAD_OMEN(),
+    BLINDNESS(),
+    CONDUIT_POWER(),
+    DOLPHINS_GRACE(),
+    FIRE_RESISTANCE(),
+    GLOWING(),
+    HASTE(),
+    HEALTH_BOOST(),
+    HERO_OF_THE_VILLAGE(),
+    HUNGER(),
+    INSTANT_DAMAGE(),
+    INSTANT_HEALTH(),
+    INVISIBILITY(),
+    JUMP_BOOST(),
+    LEVITATION(),
+    LUCK(),
+    MINING_FATIGUE(),
+    NAUSEA(),
+    NIGHT_VISION(),
+    POISON(),
+    REGENERATION(),
+    RESISTANCE(),
+    SATURATION(),
+    SLOWNESS(),
+    SLOW_FALLING(),
+    SPEED(),
+    STRENGTH(),
+    UNLUCK(),
+    WATER_BREATHING(),
+    WEAKNESS(),
+    WITHER(),
     ;
-
-    private final String translation;
-
-    PotionEffectTypeLang(final String translation) {
-        this.translation = translation;
-    }
+    private final String type = "effect";
 
     @Override public String getTranslation() {
-        final String type = "effect";
-        return String.join(".", Arrays.asList(type, "minecraft", translation));
+        return getTranslation(Bukkit.getVersion());
+    }
+
+    @Override public String getTranslation(String version) {
+        return String.join(".", Arrays.asList(type, "minecraft", this.name().toLowerCase()));
     }
 
     @Override public PotionEffectType get() {
-        return PotionEffectType.getByName(this.name());
+        final PotionEffectType value = PotionEffectType.getByName(this.name());
+        Validate.notNull(value, PlayerLangAPI.NOT_SUPPORTED);
+        return value;
     }
 }

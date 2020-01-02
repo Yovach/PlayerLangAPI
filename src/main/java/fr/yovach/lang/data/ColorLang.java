@@ -1,38 +1,38 @@
 package fr.yovach.lang.data;
 
 import fr.yovach.lang.ICraftLang;
+import org.bukkit.Bukkit;
 import org.bukkit.Color;
 
 import java.util.Arrays;
 
 public enum ColorLang implements ICraftLang<Color> {
-    BLACK("black"),
-    BLUE("blue"),
-    BROWN("brown"),
-    CYAN("cyan"),
-    GRAY("gray"),
-    GREEN("green"),
-    LIGHT_BLUE("light_blue"),
-    LIGHT_GRAY("light_gray"),
-    LIME("lime"),
-    MAGENTA("magenta"),
-    ORANGE("orange"),
-    PINK("pink"),
-    PURPLE("purple"),
-    RED("red"),
-    WHITE("white"),
-    YELLOW("yellow"),
+    BLACK(),
+    BLUE(),
+    BROWN(),
+    CYAN(),
+    GRAY(),
+    GREEN(),
+    LIGHT_BLUE(),
+    LIGHT_GRAY(),
+    LIME(),
+    MAGENTA(),
+    ORANGE(),
+    PINK(),
+    PURPLE(),
+    RED(),
+    WHITE(),
+    YELLOW(),
     ;
 
-    private final String translation;
-
-    ColorLang(final String translation) {
-        this.translation = translation;
-    }
+    private final String type = "color";
 
     @Override public String getTranslation() {
-        final String type = "color";
-        return String.join(".", Arrays.asList(type, "minecraft", translation));
+        return getTranslation(Bukkit.getBukkitVersion());
+    }
+
+    @Override public String getTranslation(String version) {
+        return String.join(".", Arrays.asList(type, "minecraft", this.name().toLowerCase()));
     }
 
     /**
