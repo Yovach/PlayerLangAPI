@@ -63,7 +63,7 @@ public final class PlayerLangAPI extends JavaPlugin {
     }
 
     /**
-     * @return if NBTAPI plugin is enabled
+     * @return true if NBTAPI plugin is enabled
      */
     public boolean hasNBTAPI() {
         return getServer().getPluginManager().isPluginEnabled("NBTAPI");

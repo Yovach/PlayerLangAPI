@@ -945,7 +945,7 @@ public enum MaterialLang implements ICraftLang<Material> {
     WHITE_STAINED_GLASS("block"),
     WHITE_STAINED_GLASS_PANE("block"),
     WHITE_TERRACOTTA("block"),
-    WHITE_TULIP("block"),
+    WtHITE_TULIP("block"),
     WHITE_WOOL("block"),
     WITCH_SPAWN_EGG("item"),
     WITHER_ROSE("block"),
