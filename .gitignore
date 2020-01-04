@@ -2,5 +2,4 @@ target/**
 .idea/**
 **.iml
 .gitignore
-1_12_lang.json
-1_15_lang.json
+tools/**_lang.json
